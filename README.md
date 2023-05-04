@@ -16,6 +16,7 @@ Hello, I am Marco Díaz
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -100,6 +101,13 @@ You can deploy this project in this link: <a href="https://marcodiaz2000.github.
 
 
 <!-- CONTRIBUTING -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+**Project 3: Add and remove items.**
+In this project, I will implement the CRUD (create, read, update, delete) methods. All the elements of the user interface will be fully functional and my application will be completed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
