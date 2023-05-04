@@ -56,12 +56,13 @@ function clearTasks() {
 function loadLocalStorage() {
   const storedTasks = localStorage.getItem('tasks');
   console.log('storedTasks:', storedTasks);
+  
   if (storedTasks) {
     return JSON.parse(storedTasks);
-  } else {
-    saveLocalStorage();
-    return tasks;
   }
+  
+  saveLocalStorage();
+  return tasks;
 }
 
 tasks = loadLocalStorage();
@@ -74,6 +75,6 @@ clearButton.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   tasks = loadLocalStorage() || tasks;
-  console.log('tasks after loading from localStorage:', tasks); 
+  console.log('tasks after loading from localStorage:', tasks);
   renderTasks();
 });
