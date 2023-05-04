@@ -1,5 +1,5 @@
 import './style.css';
-import { updateStatus } from './status.js';
+import updateStatus from './status.js';
 
 let tasks = [
   { description: 'Task 1', completed: false, index: 0 },
@@ -9,6 +9,10 @@ let tasks = [
   { description: 'Task 5', completed: false, index: 4 },
   { description: 'Task 6', completed: false, index: 5 },
 ];
+
+function saveLocalStorage() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
 
 function renderTasks() {
   const todoList = document.getElementById('todo-list');
@@ -47,12 +51,8 @@ function renderTasks() {
 }
 
 function clearTasks() {
-  tasks = tasks.filter(task => !task.completed);
+  tasks = tasks.filter((task) => !task.completed);
   renderTasks();
-}
-
-function saveLocalStorage() {
-  localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 function loadLocalStorage() {

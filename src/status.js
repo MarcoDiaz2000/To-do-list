@@ -1,3 +1,3 @@
-export function updateStatus(task, completed) {
-    task.completed = completed;
-  }
+export default function updateStatus(task, completed) {
+  task.completed = completed;
+}
