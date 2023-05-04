@@ -5,6 +5,9 @@ let tasks = [
   { description: 'Task 1', completed: false, index: 0 },
   { description: 'Task 2', completed: false, index: 1 },
   { description: 'Task 3', completed: true, index: 2 },
+  { description: 'Task 4', completed: false, index: 3 },
+  { description: 'Task 5', completed: false, index: 4 },
+  { description: 'Task 6', completed: false, index: 5 },
 ];
 
 function renderTasks() {
@@ -32,6 +35,9 @@ function renderTasks() {
         description.classList.remove('strikethrough');
         updateStatus(task, false);
       }
+
+      updateStatus(task, checkbox.checked);
+      saveLocalStorage();
     });
 
     listItem.appendChild(checkbox);
@@ -40,13 +46,27 @@ function renderTasks() {
   });
 }
 
-function clearCompletedTasks() {
+function clearTasks() {
   tasks = tasks.filter(task => !task.completed);
   renderTasks();
 }
 
+function saveLocalStorage() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function loadLocalStorage() {
+  const storedTasks = localStorage.getItem('tasks');
+  return storedTasks ? JSON.parse(storedTasks) : [];
+}
+
+tasks = loadLocalStorage();
+
 const clearButton = document.getElementById('clear-completed');
-clearButton.addEventListener('click', clearCompletedTasks);
+clearButton.addEventListener('click', () => {
+  clearTasks();
+  saveLocalStorage();
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   renderTasks();
