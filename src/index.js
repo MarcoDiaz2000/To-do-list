@@ -34,10 +34,8 @@ function renderTasks() {
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
         description.classList.add('strikethrough');
-        updateStatus(task, true);
       } else {
         description.classList.remove('strikethrough');
-        updateStatus(task, false);
       }
 
       updateStatus(task, checkbox.checked);
@@ -57,7 +55,13 @@ function clearTasks() {
 
 function loadLocalStorage() {
   const storedTasks = localStorage.getItem('tasks');
-  return storedTasks ? JSON.parse(storedTasks) : [];
+  console.log('storedTasks:', storedTasks);
+  if (storedTasks) {
+    return JSON.parse(storedTasks);
+  } else {
+    saveLocalStorage();
+    return tasks;
+  }
 }
 
 tasks = loadLocalStorage();
@@ -69,5 +73,7 @@ clearButton.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  tasks = loadLocalStorage() || tasks;
+  console.log('tasks after loading from localStorage:', tasks); 
   renderTasks();
 });
