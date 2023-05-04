@@ -1,5 +1,5 @@
 import './style.css';
-import updateStatus from './status.js';
+import updateStatus from './modules/status.js';
 
 let tasks = [
   { description: 'Task 1', completed: false, index: 0 },
