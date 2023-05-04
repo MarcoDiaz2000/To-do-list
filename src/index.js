@@ -1,4 +1,5 @@
 import './style.css';
+import { updateStatus } from './status.js';
 
 const tasks = [
   { description: 'Task 1', completed: false, index: 0 },
@@ -25,8 +26,10 @@ function renderTasks() {
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
         description.classList.add('strikethrough');
+        updateStatus(task, true);
       } else {
         description.classList.remove('strikethrough');
+        updateStatus(task, false);
       }
     });
 
