@@ -56,11 +56,9 @@ function clearTasks() {
 function loadLocalStorage() {
   const storedTasks = localStorage.getItem('tasks');
   console.log('storedTasks:', storedTasks);
-  
   if (storedTasks) {
     return JSON.parse(storedTasks);
   }
-  
   saveLocalStorage();
   return tasks;
 }
