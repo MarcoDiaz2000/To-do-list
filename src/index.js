@@ -1,5 +1,6 @@
 import './style.css';
 import updateStatus from './modules/status.js';
+import { addTask, deleteTask, editTask } from './modules/taskAdmin.js';
 
 let tasks = [];
 
@@ -62,6 +63,20 @@ const clearButton = document.getElementById('clear-completed');
 clearButton.addEventListener('click', () => {
   clearTasks();
   saveLocalStorage();
+});
+
+const addTaskForm = document.getElementById('add-task-form');
+const taskDescriptionInput = document.getElementById('task-description');
+
+addTaskForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const description = taskDescriptionInput.value.trim();
+  if (description) {
+    addTask(description, tasks);
+    taskDescriptionInput.value = '';
+    renderTasks();
+    saveLocalStorage();
+  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {

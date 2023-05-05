@@ -32,15 +32,18 @@ li.completed {
   margin: 150px auto;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 h1 {
   font-size: 24px;
-  margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   padding-left: 10px;
   padding-top: 10px;
+  margin: 0%;
 }
 
 .strikethrough {
@@ -66,4 +69,50 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.add-task-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.add-task-form {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+}
+
+.task-input {
+  flex-grow: 1;
+  padding: 8px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-right: none;
+  outline: none;
+  border: none;
+}
+
+.add-task-button {
+  padding: 12px 16px;
+  font-size: 18px;
+  background-color: #007bff00;
+  color: #141414;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+}
+
+.add-task-button:hover {
+  background-color: #afafaf58;
+}
+
+.task-input-container {
+  display: flex;
+  justify-content: space-between;
 }
