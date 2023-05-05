@@ -1,14 +1,7 @@
 import './style.css';
 import updateStatus from './modules/status.js';
 
-let tasks = [
-  { description: 'Task 1', completed: false, index: 0 },
-  { description: 'Task 2', completed: false, index: 1 },
-  { description: 'Task 3', completed: true, index: 2 },
-  { description: 'Task 4', completed: false, index: 3 },
-  { description: 'Task 5', completed: false, index: 4 },
-  { description: 'Task 6', completed: false, index: 5 },
-];
+let tasks = [];
 
 function saveLocalStorage() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
