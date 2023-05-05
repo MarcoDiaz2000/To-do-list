@@ -104,8 +104,7 @@ You can deploy this project in this link: <a href="https://marcodiaz2000.github.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-**Project 3: Add and remove items.**
-In this project, I will implement the CRUD (create, read, update, delete) methods. All the elements of the user interface will be fully functional and my application will be completed.
+- The user should be able to reorder the list by dragging each item and moving it into the desired position.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
