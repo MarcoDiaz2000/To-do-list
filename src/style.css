@@ -16,6 +16,7 @@ li {
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  position: relative;
 }
 
 input[type='checkbox'] {
@@ -115,4 +116,28 @@ h1 {
 .task-input-container {
   display: flex;
   justify-content: space-between;
+}
+
+.three-dots {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.trash-icon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.edit-mode {
+  background-color: #f0f0f0;
+}
+
+.three-dots,
+.trash-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  cursor: pointer;
+  transform: translateY(-50%);
+  padding-right: 20px;
 }
