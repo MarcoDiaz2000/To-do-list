@@ -82,7 +82,7 @@ To run tests, run a live server on your computer.
 
 ### Deployment
 
-You can deploy this project in this link: <a href="https://marcodiaz2000.github.io/To-do-list/">www.marcodiaz2000.github.io/To-do-list</a>
+You can deploy this project in this link: <a href="https://marcodiaz2000.github.io/To-do-list/dist/">www.marcodiaz2000.github.io/To-do-list/dist/</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
