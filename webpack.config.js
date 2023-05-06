@@ -23,6 +23,7 @@ module.exports = async () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './src/index.html',
+        publicPath: '/To-do-list/dist/',
       }),
     ],
     module: {
