@@ -39,7 +39,7 @@ function renderTasks() {
     const trashIcon = document.createElement('span');
     trashIcon.textContent = '🗑️';
     trashIcon.classList.add('trash-icon');
-    trashIcon.style.display = 'none';
+    trashIcon.style.display = '';
     listItem.appendChild(threeDots);
     listItem.appendChild(trashIcon);
     const enterEditMode = () => {
@@ -50,7 +50,7 @@ function renderTasks() {
         setTimeout(() => {
           description.textContent = input.value;
           listItem.replaceChild(description, input);
-          trashIcon.style.display = 'none';
+          // trashIcon.style.display = 'none';
         }, 100);
       });
       input.addEventListener('keydown', (event) => {
@@ -58,14 +58,14 @@ function renderTasks() {
           event.preventDefault();
           description.textContent = input.value;
           listItem.replaceChild(description, input);
-          threeDots.style.display = '';
-          trashIcon.style.display = 'none';
+          // threeDots.style.display = '';
+          // trashIcon.style.display = 'none';
         }
       });
       listItem.replaceChild(input, description);
       input.focus();
-      threeDots.style.display = 'none';
-      trashIcon.style.display = '';
+      // threeDots.style.display = 'none';
+      // trashIcon.style.display = '';
     };
     description.addEventListener('click', () => {
       enterEditMode();

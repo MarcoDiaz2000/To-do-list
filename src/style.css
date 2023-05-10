@@ -119,24 +119,23 @@ h1 {
 
 .three-dots {
   cursor: pointer;
-  margin-left: auto;
+  right: 0;
+  margin-right: 5px;
 }
 
 .trash-icon {
   cursor: pointer;
-  margin-left: 5px;
+  right: 0;
+  margin-right: 25px;
+  padding-bottom: 5px;
 }
 
 .edit-mode {
-  background-color: #f0f0f0;
+  background-color: #241616;
 }
 
 .three-dots,
 .trash-icon {
   position: absolute;
-  top: 50%;
-  right: 0;
   cursor: pointer;
-  transform: translateY(-50%);
-  padding-right: 20px;
 }
