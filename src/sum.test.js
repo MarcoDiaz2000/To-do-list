@@ -1,4 +1,4 @@
-const sum = require('./sum');
+const sum = require('./sum.js');
 
 const a = 1;
 const b = 2;

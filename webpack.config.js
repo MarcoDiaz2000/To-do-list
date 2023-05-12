@@ -13,7 +13,7 @@ module.exports = async () => {
     entry: './src/index.js',
     output: {
       filename: '[name].[contenthash].js',
-      // path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'dist'),
       publicPath: '/',
     },
     devServer: {
@@ -23,7 +23,7 @@ module.exports = async () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './src/index.html',
-        // publicPath: '/To-do-list/dist/',
+        publicPath: '/To-do-list/dist/',
       }),
     ],
     module: {
