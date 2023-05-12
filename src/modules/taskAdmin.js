@@ -16,10 +16,3 @@ export function deleteTask(taskIndex, tasks) {
     tasks.splice(index, 1);
   }
 }
-
-/* export function editTask(index, newDescription, tasks) {
-  const task = tasks.find((task) => task.index === index);
-  if (task) {
-    task.description = newDescription;
-  }
-} */
